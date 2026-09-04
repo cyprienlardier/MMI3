@@ -2,10 +2,13 @@ import Button from "./UI/Button";
 import Avatar from "./UI/Avatar";
 
 function User({Work, name,photo, connected}) {
+  const statuscolor = connected ? "bg-green-500" : "bg-red-400";
   return (
     <div className="flex items-center space-x-4 p-4 ">
+      <div className="relative">
      <Avatar src={photo} alt={name} />
-     <span className={`w-3 h-3 rounded-full ${connected ? 'bg-green-500' : 'bg-red-400'}`}></span>
+     <span className={`absolute right-0 bottom-0 w-3 h-3 rounded-full ${statuscolor }`}></span>
+    </div>
     <div className="flex flex-col mr-8">
     <h2 className="font-bold text-lg">{name}</h2>
     <p className="text-gray-400 font-medium">{Work}</p>
