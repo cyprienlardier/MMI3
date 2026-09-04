@@ -3,7 +3,7 @@ function User(props) {
   return (
     <div className="bg-amber-900 text-white p-4 m-4 rounded">
       <h2>{props.name}</h2>
-      <p>Age: {props.age}</p>
+      
     </div>
   );
 }
@@ -11,9 +11,14 @@ function User(props) {
 function App() {
  return (
   <>
-  <User name="Hedy Lamarr" age={101} />
-  <User name="Ada Lovelace" age={207} />
-  <User name="Grace Hopper" age={115} />
+  <h1>ROOM</h1>
+  <p> 5 people are around right now </p>
+  <User avatar=""  alt="Dale Houston" name="Dale Houston "  />
+  <User  avatar src="" alt="Madge Murphy" name="Madge Murphy"  />
+  <User  avatar src="" alt="Margaret Garner" name="Margaret Garner"  />
+  <User avatar src="" alt="Gertrude Roberts" name="Gertrude Roberts"  />
+  <User avatar src="" alt="Joshua Oison" name="Joshua Oison"  />
+
   </>
  );
 }
