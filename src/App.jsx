@@ -1,25 +1,22 @@
 
-function User(props) {
+import User from "./components/User";
+import data from "./data/data";
+
+
+function App() {
+ 
   return (
-    <div className="bg-amber-900 text-white p-4 m-4 rounded">
-      <h2>{props.name}</h2>
-      
-    </div>
+    <div className=" p-8 rounded-lg shadow-md mx-auto max-w-md bg-white">
+    <h1 className="text-2xl font-bold">Room</h1>
+    <p> 5 people are around right now</p>
+   <ul className="flex flex-col gap-4">
+   {data.map((user) => (
+   <li> <User key={user.id} name={user.name} Work={user.Work} photo={user.photo}  connected={user.connected} />
+   </li>
+   ))}
+  </ul>
+  </div>
   );
 }
 
-function App() {
- return (
-  <>
-  <h1>ROOM</h1>
-  <p> 5 people are around right now </p>
-  <User avatar=""  alt="Dale Houston" name="Dale Houston "  />
-  <User  avatar src="" alt="Madge Murphy" name="Madge Murphy"  />
-  <User  avatar src="" alt="Margaret Garner" name="Margaret Garner"  />
-  <User avatar src="" alt="Gertrude Roberts" name="Gertrude Roberts"  />
-  <User avatar src="" alt="Joshua Oison" name="Joshua Oison"  />
-
-  </>
- );
-}
 export default App;
